@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" class="notranslate" translate="no">
+  <head>
+    <meta charset="utf-8" />
+    <title>LaserTag Duel</title>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="google" content="notranslate" />
+    <meta
+      name="viewport"
+      content="width=device-width initial-scale=1, minimum-scale=0, maximum-scale=0, user-scalable=no"
+    />
+    <link rel="stylesheet" type="text/css" href="/game/css/style_game.css" />
+    <script src="/game/js/three.js"></script>
+    <!-- include jsartookit -->
+    <script src="/game/jsartoolkit5/artoolkit.min.js"></script>
+    <script src="/game/jsartoolkit5/artoolkit.api.js"></script>
+    <!-- include threex.artoolkit -->
+    <script src="/game/threex/threex-artoolkitsource.js"></script>
+    <script src="/game/threex/threex-artoolkitcontext.js"></script>
+    <script src="/game/threex/threex-arbasecontrols.js"></script>
+    <script src="/game/threex/threex-armarkercontrols.js"></script>
+  </head>
+  <body>
+    <div id="screenApp">
+      <script src="/game/js/game_three.js"></script>
+      <div id="nav">
+        <div id="tablica_wynikow">
+          <div id="trafione">0</div>
+          <div id="nietrafione">0</div>
+        </div>
+        <div id="status"></div>
+
+        <!-- chwilowa lokalizacja gracza na ekran-->
+        <div id="gpsPosition">waiting for another player</div>
+        <div style="clear: both;"></div>
+      </div>
+      <div id="celownik"><img src="/game/img/celownik6.png" class="cel" /></div>
+
+      <!--<progress id="health" value="10" max="100"></progress> -->
+      <div class="content">
+        <div class="blood">100</div>
+        <div class="blood">100</div>
+      </div>
+      <div id="lowerNav">
+        <div id="ammoBar">
+          <div id="ammo"></div>
+        </div>
+
+        <button id="buttonFire" onclick="fireShoot();">
+          FIRE
+        </button>
+      </div>
+    </div>
+    <script src="/game/js/game_javascript.js"></script>
+  </body>
+</html>

@@ -1,0 +1,433 @@
+body {
+  overflow: hidden;
+  margin: 0;
+}
+
+#scannerApp {
+  visibility: hidden;
+}
+
+#celownik .cel {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  text-align: center;
+  width: 20vw;
+  height: 20vw;
+  transform: translate(-50%, -50%);
+}
+
+#buttonFire {
+  position: absolute;
+  float: left;
+  width: 20vw;
+  height: 10vh;
+  letter-spacing: 1px;
+  opacity: 0.5;
+  text-align: center;
+  vertical-align: middle;
+  bottom: 5vh;
+  right: 5vw;
+  box-shadow: inset 0 0 50px #fff, inset 20px 0 80px rgb(2, 224, 231),
+    inset -20px 0 80px rgb(45, 172, 165), inset 20px 0 300px rgb(0, 149, 194),
+    inset -20px 0 300px rgb(2, 144, 209), 0 0 50px #fff,
+    -10px 0 80px rgb(4, 131, 124), 10px 0 80px rgb(5, 175, 218);
+  border-radius: 50%;
+  border: 3px solid rgb(0, 108, 197);
+
+  cursor: pointer;
+  color: #ffffff;
+  font-family: Arial;
+  font-size: 4vw;
+  padding: 1% 3%;
+  text-decoration: none;
+}
+#buttonFire:active {
+  box-shadow: inset 0 0 50px #fff, inset 20px 0 80px rgb(2, 224, 231),
+    inset -20px 0 80px rgb(2, 61, 58), inset 20px 0 300px rgb(0, 247, 255),
+    inset -20px 0 300px #0ff, 0 0 50px #fff, -10px 0 80px rgb(2, 61, 58),
+    10px 0 80px #0ff;
+  border: 3px solid rgb(0, 247, 255);
+  color: #00233b;
+  opacity: 0.9;
+}
+
+.buttonHref {
+  position: absolute;
+  float: left;
+  width: 20vw;
+  height: 10vh;
+  letter-spacing: 1px;
+
+  text-align: center;
+  vertical-align: middle;
+  bottom: 5vh;
+  left: 40vw;
+
+  /* box-shadow:
+    inset 0 0 50px #fff,
+    inset 20px 0 80px rgb(2, 238, 93),
+    inset -20px 0 80px rgb(79, 240, 47),
+    inset 20px 0 300px rgb(24, 248, 229),
+    inset -20px 0 300px rgb(20, 175, 0),
+    0 0 50px #fff,
+    -10px 0 80px  rgb(129, 255, 11),
+    10px 0 80px rgb(3, 245, 3);
+    border-radius: 50%;
+    border: 3px solid  rgb(0, 197, 0);
+*/
+  border-radius: 50%;
+  cursor: pointer;
+  color: #000000;
+  font-family: Arial;
+  font-size: 4vw;
+  padding: 1% 3%;
+  text-decoration: none;
+  animation-name: changeBg;
+  animation-duration: 1.2s;
+  animation-iteration-count: infinite;
+}
+.buttonHref:active {
+  box-shadow: inset 0 0 50px #fff, inset 20px 0 80px rgb(0, 153, 25),
+    inset -20px 0 80px rgb(0, 177, 59), inset 20px 0 300px rgb(0, 107, 14),
+    inset -20px 0 300px rgb(0, 77, 19), 0 0 50px #fff,
+    -10px 0 80px rgb(18, 255, 89), 10px 0 80px rgb(0, 245, 53);
+  border: 3px solid rgb(64, 218, 26);
+  color: #5fff9c;
+  opacity: 0.9;
+}
+
+@keyframes changeBg {
+  from {
+    background-color: transparent;
+    opacity: 0.1;
+  }
+  to {
+    box-shadow: inset 0 0 50px #fff, inset 20px 0 80px rgb(2, 238, 93),
+      inset -20px 0 80px rgb(79, 240, 47), inset 20px 0 300px rgb(24, 248, 229),
+      inset -20px 0 300px rgb(20, 175, 0), 0 0 50px #fff,
+      -10px 0 80px rgb(129, 255, 11), 10px 0 80px rgb(3, 245, 3);
+    opacity: 0.5;
+    border: 3px solid rgb(0, 197, 0);
+  }
+}
+
+.buttonHrefWrong {
+  position: absolute;
+  float: left;
+  width: 20vw;
+  height: 10vh;
+  letter-spacing: 1px;
+  opacity: 0.5;
+  text-align: center;
+  vertical-align: middle;
+  bottom: 5vh;
+  left: 40vw;
+  /*
+    box-shadow:
+    inset 0 0 50px #fff,
+    inset 20px 0 80px rgb(255, 10, 1),
+    inset -20px 0 80px rgb(255, 9, 9),
+    inset 20px 0 300px rgb(248, 58, 24),
+    inset -20px 0 300px rgb(247, 85, 85),
+    0 0 50px #fff,
+    -10px 0 80px  rgb(170, 37, 19),
+    10px 0 80px rgb(241, 66, 66);
+    border-radius: 50%;
+    border: 3px solid  rgb(253, 115, 115);
+    */
+  border-radius: 50%;
+  cursor: pointer;
+  color: #000000;
+  font-family: Arial;
+  font-size: 4vw;
+  padding: 1% 3%;
+  text-decoration: none;
+  animation-name: changeBg2;
+  animation-duration: 1.2s;
+  animation-iteration-count: infinite;
+}
+.buttonHrefWrong:active {
+  box-shadow: inset 0 0 50px #fff, inset 20px 0 80px rgb(255, 8, 0),
+    inset -20px 0 80px rgb(153, 0, 0), inset 20px 0 300px rgb(255, 38, 0),
+    inset -20px 0 300px rgb(128, 0, 0), 0 0 50px #fff,
+    -10px 0 80px rgb(170, 37, 19), 10px 0 80px rgb(241, 66, 66);
+
+  border: 3px solid rgb(253, 115, 115);
+  color: #ffffff;
+  opacity: 0.9;
+}
+
+@keyframes changeBg2 {
+  from {
+    background-color: transparent;
+    opacity: 0.1;
+  }
+  to {
+    box-shadow: inset 0 0 50px #fff, inset 20px 0 80px rgb(255, 10, 1),
+      inset -20px 0 80px rgb(255, 9, 9), inset 20px 0 300px rgb(248, 58, 24),
+      inset -20px 0 300px rgb(247, 85, 85), 0 0 50px #fff,
+      -10px 0 80px rgb(170, 37, 19), 10px 0 80px rgb(241, 66, 66);
+    border-radius: 50%;
+    border: 3px solid rgb(253, 115, 115);
+  }
+}
+
+.msgMarker {
+  position: absolute;
+  font-size: 5vw;
+  width: 50vw;
+  margin-top: 5vh;
+  color: rgb(15, 15, 15);
+  box-shadow: inset 0 0 60px #fff, inset 30px 0 90px rgb(138, 138, 138),
+    inset -30px 0 90px rgb(156, 141, 141), inset 30px 0 410px rgb(224, 210, 223),
+    inset -30px 0 410px rgb(63, 63, 63), 0 0 60px #fff,
+    -20px 0 90px rgb(255, 255, 255), 50px 0 90px rgb(255, 255, 255);
+  transform: translate(-50%, 0%);
+  left: 50vw;
+  text-align: center;
+}
+
+#lowerNav {
+  position: absolute;
+  bottom: 5vh;
+  width: 100vw;
+}
+
+#preloader {
+  width: 100vw;
+  height: 100vh;
+  background-image: url("/game/img/darkbg.jpg");
+  background-repeat: repeat;
+  color: white;
+  background-position: top bottom;
+}
+
+.btnPreload {
+  position: absolute;
+  border-radius: 50%;
+  box-shadow: inset 0 0 60px #fff, inset 30px 0 90px rgb(138, 138, 138),
+    inset -30px 0 90px rgb(156, 141, 141), inset 30px 0 410px rgb(224, 210, 223),
+    inset -30px 0 410px rgb(63, 63, 63), 0 0 60px #fff,
+    -20px 0 90px rgb(255, 255, 255), 50px 0 90px rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  bottom: 5vh;
+  left: 40vw;
+  width: 20vw;
+  height: 10vh;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 4vw;
+  text-decoration: none;
+  animation: animateBtn 3.5s infinite ease-in;
+}
+
+.btnPreload:active {
+  box-shadow: inset 0 0 50px #fff, inset 20px 0 80px #1b1b1b,
+    inset -20px 0 80px rgb(26, 24, 24), inset 20px 0 300px rgb(0, 0, 0),
+    inset -20px 0 300px rgb(36, 36, 36), 0 0 50px #fff,
+    -10px 0 80px rgb(85, 85, 85), 10px 0 80px rgb(0, 0, 0);
+  border: 3px solid rgb(238, 238, 238);
+  color: rgb(255, 255, 255);
+}
+
+@keyframes animateBtn {
+  0% {
+    box-shadow: inset 0 0 60px #fff, inset 30px 0 90px rgb(138, 138, 138),
+      inset -30px 0 90px rgb(156, 141, 141),
+      inset 30px 0 410px rgb(224, 210, 223), inset -30px 0 410px rgb(63, 63, 63),
+      0 0 60px #fff, -20px 0 90px rgb(255, 255, 255),
+      50px 0 90px rgb(255, 255, 255);
+  }
+  25% {
+    box-shadow: inset 0 0 60px #fff,
+      inset 30px 0 90px rgb(12, 56, 255) inset -30px 0 90px rgb(87, 69, 69),
+      inset 30px 0 410px rgb(224, 210, 223),
+      inset -30px 0 410px rgb(93, 133, 218), 0 0 60px #fff,
+      -20px 0 90px rgb(183, 179, 223), 50px 0 90px rgb(122, 158, 179);
+  }
+  50% {
+    box-shadow: inset 0 0 60px #fff, inset 30px 0 90px rgb(255, 228, 228),
+      inset -30px 0 90px rgb(156, 141, 141),
+      inset 30px 0 410px rgb(128, 122, 128), inset -30px 0 410px rgb(63, 63, 63),
+      0 0 60px #fff, -20px 0 90px rgb(39, 39, 39), 50px 0 90px rgb(0, 0, 0);
+  }
+  75% {
+    box-shadow: inset 0 0 60px #fff, inset 30px 0 90px rgb(80, 200, 255),
+      inset -30px 0 90px rgb(156, 141, 141), inset 30px 0 410px rgb(21, 36, 241),
+      inset -30px 0 410px rgb(32, 113, 189), 0 0 60px #fff,
+      -20px 0 90px rgb(110, 87, 173), 50px 0 90px rgb(255, 255, 255);
+  }
+  100% {
+    box-shadow: inset 0 0 60px #fff, inset 30px 0 90px rgb(138, 138, 138),
+      inset -30px 0 90px rgb(156, 141, 141),
+      inset 30px 0 410px rgb(224, 210, 223), inset -30px 0 410px rgb(63, 63, 63),
+      0 0 60px #fff, -20px 0 90px rgb(255, 255, 255),
+      50px 0 90px rgb(255, 255, 255);
+  }
+}
+
+#title {
+  position: absolute;
+  font-size: 5vw;
+  width: 100vw;
+  margin-top: 40vh;
+  color: rgb(15, 15, 15);
+  background-color: white;
+  box-shadow: inset 0 0 60px #fff, inset 30px 0 90px rgb(138, 138, 138),
+    inset -30px 0 90px rgb(156, 141, 141), inset 30px 0 410px rgb(224, 210, 223),
+    inset -30px 0 410px rgb(63, 63, 63), 0 0 60px #fff,
+    -20px 0 90px rgb(255, 255, 255), 50px 0 90px rgb(255, 255, 255);
+  transform: translate(-50%, 0%);
+  left: 50vw;
+  text-align: center;
+}
+
+#tmp {
+  text-decoration: none;
+  color: #525252;
+  font-size: 5vw;
+}
+a:visited {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+}
+a:link {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+}
+
+#permMsg {
+  background-color: rgb(131, 131, 131);
+  position: absolute;
+  top: 10vh;
+  left: 50vw;
+  text-align: center;
+}
+
+#msgScan {
+  background-color: rgb(131, 131, 131);
+  position: absolute;
+  top: 5vh;
+  left: 50vw;
+  text-align: center;
+}
+@keyframes moveDivMsg {
+  from {
+    top: 5vh;
+  }
+  to {
+    top: 55vh;
+  }
+}
+#msgWrongMarker {
+  background-color: #ff1514;
+  animation: changeWrongMarker 5s infinite ease-out;
+}
+#msgGL {
+  box-shadow: inset 0 0 50px #fff, inset 20px 0 80px rgb(2, 238, 93),
+    inset -20px 0 80px rgb(79, 240, 47), inset 20px 0 300px rgb(24, 248, 229),
+    inset -20px 0 300px rgb(20, 175, 0), 0 0 50px #fff,
+    -10px 0 80px rgb(129, 255, 11), 10px 0 80px rgb(3, 245, 3);
+  border: 3px solid rgb(0, 197, 0);
+  animation: changeGL 5s infinite ease-in;
+}
+
+@keyframes changeGL {
+  0% {
+    box-shadow: inset 0 0 50px #fff, inset 20px 0 80px rgb(2, 238, 93),
+      inset -20px 0 80px rgb(79, 240, 47), inset 20px 0 300px rgb(24, 248, 229),
+      inset -20px 0 300px rgb(20, 175, 0), 0 0 50px #fff,
+      -10px 0 80px rgb(129, 255, 11), 10px 0 80px rgb(3, 245, 3);
+    border: 3px solid rgb(0, 197, 0);
+  }
+  20% {
+    box-shadow: inset 0 0 50px #fff, inset 20px 0 80px rgb(39, 253, 68),
+      inset -20px 0 80px rgb(33, 197, 0), inset 20px 0 300px rgb(212, 248, 9),
+      inset -20px 0 300px rgb(20, 175, 0), 0 0 50px #fff,
+      -10px 0 80px rgb(170, 255, 91), 10px 0 80px rgb(3, 245, 3);
+    border: 3px solid rgb(0, 122, 0);
+  }
+  40% {
+    box-shadow: inset 0 0 50px #fff, inset 20px 0 80px rgb(2, 238, 93),
+      inset -20px 0 80px rgb(66, 104, 30), inset 20px 0 300px rgb(24, 248, 229),
+      inset -20px 0 300px rgb(18, 250, 95), 0 0 50px #fff,
+      -10px 0 80px rgb(129, 255, 11), 10px 0 80px rgb(3, 245, 3);
+    border: 3px solid rgb(0, 255, 0);
+  }
+  60% {
+    box-shadow: inset 0 0 50px #fff, inset 20px 0 80px rgb(0, 253, 105),
+      inset -20px 0 80px rgb(47, 240, 182), inset 20px 0 300px rgb(0, 143, 131),
+      inset -20px 0 300px rgb(4, 255, 234), 0 0 50px #fff,
+      -10px 0 80px rgb(129, 255, 11), 10px 0 80px rgb(3, 245, 3);
+    border: 3px solid rgb(0, 197, 154);
+  }
+  80% {
+    box-shadow: inset 0 0 50px #fff, inset 20px 0 80px rgb(135, 250, 3),
+      inset -20px 0 80px rgb(134, 240, 47), inset 20px 0 300px rgb(181, 248, 24),
+      inset -20px 0 300px rgb(20, 175, 0), 0 0 50px #fff,
+      -10px 0 80px rgb(11, 255, 214), 10px 0 80px rgb(3, 245, 76);
+    border: 3px solid rgb(112, 197, 0);
+  }
+  100% {
+    box-shadow: inset 0 0 50px #fff, inset 20px 0 80px rgb(2, 238, 93),
+      inset -20px 0 80px rgb(79, 240, 47), inset 20px 0 300px rgb(24, 248, 229),
+      inset -20px 0 300px rgb(20, 175, 0), 0 0 50px #fff,
+      -10px 0 80px rgb(129, 255, 11), 10px 0 80px rgb(3, 245, 3);
+    border: 3px solid rgb(0, 197, 0);
+  }
+}
+
+@keyframes changeOpacity {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes changeWrongMarker {
+  0% {
+    box-shadow: inset 0 0 50px #fff, inset 20px 0 80px rgb(238, 2, 2),
+      inset -20px 0 80px rgb(240, 92, 47), inset 20px 0 300px rgb(248, 24, 24),
+      inset -20px 0 300px rgb(175, 0, 0), 0 0 50px #fff,
+      -10px 0 80px rgb(255, 11, 153), 10px 0 80px rgb(245, 3, 3);
+    border: 3px solid rgb(197, 0, 76);
+  }
+  20% {
+    box-shadow: inset 0 0 50px #fff, inset 20px 0 80px rgb(248, 9, 41),
+      inset -20px 0 80px rgb(197, 7, 0), inset 20px 0 300px rgb(241, 148, 105),
+      inset -20px 0 300px rgb(230, 219, 206), 0 0 50px #fff,
+      -10px 0 80px rgb(207, 72, 55), 10px 0 80px rgb(245, 3, 23);
+    border: 3px solid rgb(252, 83, 83);
+  }
+  40% {
+    box-shadow: inset 0 0 50px #fff, inset 20px 0 80px rgb(238, 96, 2),
+      inset -20px 0 80px rgb(228, 213, 181), inset 20px 0 300px rgb(236, 82, 43),
+      inset -20px 0 300px rgb(219, 223, 199), 0 0 50px #fff,
+      -10px 0 80px rgb(255, 19, 11), 10px 0 80px rgb(245, 3, 15);
+    border: 3px solid rgb(255, 0, 64);
+  }
+  60% {
+    box-shadow: inset 0 0 50px #fff, inset 20px 0 80px rgb(253, 0, 0),
+      inset -20px 0 80px rgb(240, 118, 47), inset 20px 0 300px rgb(143, 0, 31),
+      inset -20px 0 300px rgb(212, 82, 82), 0 0 50px #fff,
+      -10px 0 80px rgb(255, 11, 11), 10px 0 80px rgb(245, 72, 3);
+    border: 3px solid rgb(197, 0, 0);
+  }
+  80% {
+    box-shadow: inset 0 0 50px #fff, inset 20px 0 80px rgb(250, 3, 3),
+      inset -20px 0 80px rgb(240, 76, 47), inset 20px 0 300px rgb(248, 24, 24),
+      inset -20px 0 300px rgb(175, 12, 0), 0 0 50px #fff,
+      -10px 0 80px rgb(255, 39, 11), 10px 0 80px rgb(245, 3, 3);
+    border: 3px solid rgb(255, 254, 246);
+  }
+  100% {
+    box-shadow: inset 0 0 50px #fff, inset 20px 0 80px rgb(238, 2, 2),
+      inset -20px 0 80px rgb(240, 92, 47), inset 20px 0 300px rgb(248, 24, 24),
+      inset -20px 0 300px rgb(175, 0, 0), 0 0 50px #fff,
+      -10px 0 80px rgb(255, 11, 11), 10px 0 80px rgb(245, 3, 3);
+    border: 3px solid rgb(197, 0, 76);
+  }
+}

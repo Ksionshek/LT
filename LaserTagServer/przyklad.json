@@ -1,0 +1,87 @@
+//ShootMessage
+const SendMessage = {
+  "type": "ShootMessage",
+  "playerID": "markerIDstrzelającego",
+  "targetID": "markerIDtargetu",
+  "gpslocation": {lot: 93845, evd: 039847}
+};
+
+ws.send(JSON.statify(SendMessage));
+//HpMessage
+const SendMessage = {
+  "type":"HpMessage",
+  "playerID":" markerID",
+  "hppoints": 6574
+};
+
+//AmmoMessage
+const SendMessage = {
+  "type":"AmmoMessage",
+  "player":" markerID",
+  "ammo": 3455
+};
+
+//MissMessgae
+const SendMessage = {
+  "type":"MissMessage",
+  "player":"markerID",
+  "target":"markerID",
+};
+  
+//ScoreMessage
+const SendMessage = {
+  "type":"ScoreMessage",
+  "playerID":" markerID",
+  "score": {"hit" : 043945,
+            "miss": 29344}
+}; 
+  
+//HitMessage
+const SendMessage = {
+  "type":"HitMessage",
+  "playerID":" markerID",
+  "targetID":"markerID",
+  "isTargetAlive" :true
+};
+
+//RageQuitMessage
+const SendMessage = {  
+  "type":"RageQuitMessage",
+  "playerID":" markerID"
+};
+
+//DisconnectInfo
+const SendMessage = {
+  "type":"DisconnectInfo",
+  "ID":" markerID"
+}
+
+//RespawnMessage
+const SendMessage = {
+  "type":"RespawnMessage",
+  "playerID":" markerID",
+  "targetID":"respawnID",
+  "gpslocation": {lot: 93845, evd: 039847}
+};
+
+//RiviveMessage
+const SendMessage = {
+  "type":"RiviveMessage",
+  "playerID":" markerID",
+  "isPlayerAlive": true
+}
+
+  
+{
+  "clients":
+    {
+        "markerID" : "ABCD12",
+        "nickname" : "nick",
+        "geolocation": "gps",
+        "hppoints" : 100,
+        "ammo" : 50,
+        "isAlive" : true,
+        "score":[
+            {"hits" : 24,"miss": 24}
+        ]
+    },

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>LaserTag Portal</title>
+    <script src="/portal/js/gameMode.js"></script>
+    <script src="/portal/js/map.js"></script>
+    <script src="/portal/js/home.js"></script>
+    <script src="/portal/js/statistic.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="/portal/css/style_portal.css"
+    /> 
+  </head>
+  <body onload="onNavigate('/'); return false;">
+    <div class="container">
+        <div class="wrapper">
+
+          <div class="neon-wrapper">
+              <span class="txt">Laser Tag</span>
+              <span class="gradient"></span>
+              <span class="dodge"></span>
+          </div>
+      </div>
+    <br/>
+    <br/>
+      <div class="tabs is-centered is-medium">
+        <ul>
+          <li class="is-active">
+           
+            <a href="#" onclick="playSound('/portal/data/click.mp3'); onNavigate('/'); return false;">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              Home</a>
+          </li>
+
+         
+
+          <li class="">
+         
+            <a href="#" onclick="playSound('/portal/data/click.mp3'); onNavigate('/game-mode'); return false;">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              Game
+            </a>
+          </li class="">
+
+         <!-- <li>
+           
+            <a href="#" onclick="playSound('/portal/data/click.mp3'); onNavigate('/map'); return false;"> 
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>Map</a>
+          </li class=""> -->
+          <li>
+
+           
+            <a href="#" onclick=" playSound('/portal/data/click.mp3'); onNavigate('/statistic'); return false;">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              Stat
+            </a>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+    <div id="root" class="tabs-details">Some content in future</div>
+    <script src="/portal/js/index.js"></script>
+    <footer>Praca inżynierska 2021 &copy
+<br/>
+Karol Kaznowski i Wojciech Książek<br/>
+Politechnika Poznańska, Teleinformatyka
+    </footer>
+  </body>
+</html>

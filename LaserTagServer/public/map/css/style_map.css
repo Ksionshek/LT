@@ -1,0 +1,16 @@
+body{
+    background-image: url("/portal/img/bg_portal.png");
+    background-repeat:repeat;
+    color:white;
+    background-position: right center;
+    margin: 0;
+
+}
+header{
+    font-size: 30px;
+    text-align: center;
+}
+#map{
+    width: 100vw;
+    height: 50vh;
+}

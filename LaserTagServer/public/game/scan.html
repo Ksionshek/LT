@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" class="notranslate" translate="no">
+  <head>
+    <meta charset="utf-8" />
+    <title>LaserTag Scan Marker</title>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="google" content="notranslate" />
+    <meta
+      name="viewport"
+      content="width=device-width initial-scale=1, minimum-scale=0, maximum-scale=0, user-scalable=no"
+    />
+    <link rel="stylesheet" type="text/css" href="/game/css/style_scan.css" />
+    <script src="/game/js/three.js"></script>
+    <!-- include jsartookit -->
+    <script src="/game/jsartoolkit5/artoolkit.min.js"></script>
+    <script src="/game/jsartoolkit5/artoolkit.api.js"></script>
+    <!-- include threex.artoolkit -->
+    <script src="/game/threex/threex-artoolkitsource.js"></script>
+    <script src="/game/threex/threex-artoolkitcontext.js"></script>
+    <script src="/game/threex/threex-arbasecontrols.js"></script>
+    <script src="/game/threex/threex-armarkercontrols.js"></script>
+  </head>
+  <body>
+    <div id="preloader">
+      <span class="msgMarker">Welcome in LaserTag!</span>
+      <span class="msgMarker" id="permMsg"
+        >Give us permission to use camera by clicking ACCEPT!</span
+      >
+      <button class="btnPreload" id="btnID" onclick="permissionReq()">
+        ACCEPT
+      </button>
+    </div>
+    <div id="scannerApp">
+      <script src="/game/js/scanner.js"></script>
+      <div id="nav"></div>
+      <span class="msgMarker" id="msgScan"
+        >To scan marker you need to point a camera <br />
+        in player's marker and press <b>SCAN</b>
+      </span>
+      <div id="celownik">
+        <img src="/game/img/celownik6.png" class="cel" />
+      </div>
+
+      <span id="lowerNav">
+        <button id="buttonFire" onclick="scanMarker();">
+          Scan
+        </button>
+      </span>
+    </div>
+  </body>
+</html>

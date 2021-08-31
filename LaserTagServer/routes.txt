@@ -1,0 +1,5 @@
+/portal
+/game/duel
+/game/deathmatch
+/portal/map
+/portal/statistic

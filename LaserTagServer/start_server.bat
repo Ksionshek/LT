@@ -1,0 +1,1 @@
+C:\Programowanie\node-v14.5.0-win-x64\node.exe app.js

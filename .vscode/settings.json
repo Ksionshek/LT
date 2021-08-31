@@ -1,0 +1,5 @@
+{
+    "prettier.withNodeModules": true,
+    "prettier.singleQuote": false
+
+}
